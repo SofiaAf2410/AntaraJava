@@ -12,9 +12,7 @@ public class Fox extends Carnivores implements Run, Voice {
 
     @Override
     public void run() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голодна и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " бегает!");
             decreaseSatiety(30);
         }

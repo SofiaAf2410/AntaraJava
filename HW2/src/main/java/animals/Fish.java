@@ -12,9 +12,7 @@ public class Fish extends Carnivores implements Swim{
 
     @Override
     public void swim() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голодна и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " плавает!");
             decreaseSatiety(10);
         }

@@ -12,9 +12,7 @@ public class Duck extends Herbivores implements Swim, Voice, Fly {
 
     @Override
     public void fly() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голодна и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " летает!");
             decreaseSatiety(10);
         }
@@ -22,9 +20,7 @@ public class Duck extends Herbivores implements Swim, Voice, Fly {
 
     @Override
     public void swim() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голодна и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " плавает!");
             decreaseSatiety(10);
         }

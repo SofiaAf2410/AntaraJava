@@ -25,16 +25,16 @@ public abstract class Animal {
         this.satiety = satiety;
     }
 
-    public void setAnimal(String area, String body_length, String life_expectancy) {
+    public void setAnimal(String area, String bodyLength, String lifeExpectancy) {
         this.area = area;
-        this.bodyLength = body_length;
-        this.lifeExpectancy = life_expectancy;
+        this.bodyLength = bodyLength;
+        this.lifeExpectancy = lifeExpectancy;
     }
 
     public void getInfo() {
         System.out.println("Семейство: " + getName() + "\nПодвид: " + getSubspecies() +
-                "\nМесто обитания: " + getArea() + "\nДлина туловища: " + getBody_length() + " см" +
-                "\nПродолжительность жизни: " + getLife_expectancy() + " лет" + "\n===============================");
+                "\nМесто обитания: " + getArea() + "\nДлина туловища: " + getBodyLength() + " см" +
+                "\nПродолжительность жизни: " + getLifeExpectancy() + " лет" + "\n===============================");
     }
 
     public abstract void eat(Food food);
@@ -48,7 +48,11 @@ public abstract class Animal {
     }
 
     public boolean isHungry() {
-        return satiety < 10;
+        if (satiety < 10) {
+            System.out.println(getSubspecies() + " голоден и хочет есть!");
+            return true;
+        }
+        return false;
     }
 
     public String getName() {
@@ -63,11 +67,11 @@ public abstract class Animal {
         return area;
     }
 
-    public String getBody_length() {
+    public String getBodyLength() {
         return bodyLength;
     }
 
-    public String getLife_expectancy() {
+    public String getLifeExpectancy() {
         return lifeExpectancy;
     }
 

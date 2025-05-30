@@ -12,9 +12,7 @@ public class Horse extends Herbivores implements Run, Voice{
 
     @Override
     public void run() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голодна и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " скачет!");
             decreaseSatiety(40);
         }

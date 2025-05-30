@@ -62,19 +62,13 @@ public class Zoo {
 
         worker.clean(grizzly);
 
-        Swim[] pond = {
-                kryakva,
-                shirokonoska,
-                zmeegolov,
-                greenAprion
-        };
+        List<Swim> pond = new ArrayList<>(List.of(kryakva, shirokonoska, zmeegolov, greenAprion));
 
         for (Swim waterfowl : pond) {
             waterfowl.swim();
         }
 
-        List<Animal> zooAnimals = new ArrayList<>();
-        zooAnimals.addAll(List.of(kryakva, shirokonoska, fenek, pesets,whiteBear,grizzly,
+        List<Animal> zooAnimals = new ArrayList<>(List.of(kryakva, shirokonoska, fenek, pesets,whiteBear,grizzly,
                 belyak, rusak, kulan, prezivalHorse, zmeegolov, greenAprion));
 
         for (Animal a : zooAnimals) {

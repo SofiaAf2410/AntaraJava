@@ -12,9 +12,7 @@ public class Rabbit extends Herbivores implements Run, Voice{
 
     @Override
     public void run() {
-        if (isHungry()) {
-            System.out.println(getSubspecies() + " голоден и хочет есть!");
-        } else {
+        if (!isHungry()) {
             System.out.println(getSubspecies() + " бегает!");
             decreaseSatiety(20);
         }
